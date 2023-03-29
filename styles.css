@@ -1,0 +1,60 @@
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.dark-theme #json-input {
+  background-color: #1c1e21;
+  color: #f8f9fa;
+}
+
+.dark-theme #json-output {
+  background-color: #1c1e21;
+  color: #f8f9fa;
+}
+
+.dark-theme #toggle-theme {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #f8f9fa;
+}
+
+#json-output {
+  white-space: pre;
+  background-color: #;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #343a40;
+  font-size: 13px;
+}
+
+h1 {
+  transition: color 0.3s ease;
+}
+
+.form-floating textarea {
+  background-color: #e9ecef;
+}
+
+#json-output::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+#json-output::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border-radius: 3px;
+}
+
+#toggle-theme {
+  z-index: 1030;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.icon-moon, .icon-sun {
+  font-family: FontAwesome;
+}
