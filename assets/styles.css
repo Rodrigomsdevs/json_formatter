@@ -58,3 +58,15 @@ h1 {
 .icon-moon, .icon-sun {
   font-family: FontAwesome;
 }
+
+/* Media queries para responsividade */
+@media screen and (max-width: 576px) {
+  .input-output-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #json-input, #json-output {
+    width: 100%;
+  }
+}
