@@ -14,6 +14,13 @@ class app_class {
     window.addEventListener('resize', this.adjustTextareaHeight);
     window.addEventListener('DOMContentLoaded', this.adjustTextareaHeight);
     this.formatJSON();
+
+
+    if (localStorage.getItem('theme') == 'night') {
+      const body = document.body;
+      body.classList.add('dark-theme');
+      this.themeIcon.className = 'icon-sun';
+    }
   }
 
   adjustTextareaHeight = () => {
@@ -24,31 +31,62 @@ class app_class {
   keyUpFunction = () => {
     let self = this;
     this.input.addEventListener('keyup', () => {
+      console.log('keyup');
+      self.formatJSON();
+    });
+
+    this.input.addEventListener('keydown', () => {
+      console.log('keyup');
       self.formatJSON();
     });
   }
 
-  formatJSON = () => {
+  /*formatJSON = () => {
     try {
-      const json = JSON.parse(this.input.innerHTML);
+      const json = JSON.parse(document.getElementById('json-input').value);
+      console.log(json);
       const jsonString = JSON.stringify(json, null, 2);
       this.output.innerHTML = Prism.highlight(jsonString, Prism.languages.json, 'json');
     } catch (error) {
-      this.output.textContent = 'JSON inválido';
+      console.log(error);
+      this.output.innerHTML =  Prism.highlight('{"invalid_json": true}', Prism.languages.json, 'json');
+
+    }
+  }*/
+
+  formatJSON = () => {
+    try {
+      const json = JSON.parse(this.input.value);
+      console.log(json);
+
+      // Removendo o uso do Prism e usando o json-view para mostrar e permitir colapsar/expandir
+      $(this.output).empty().jsonView(json);
+
+    } catch (error) {
+      console.log(error);
+      // Mantendo o feedback de JSON inválido com o Prism
+      this.output.innerHTML = Prism.highlight('{"invalid_json": true}', Prism.languages.json, 'json');
     }
   }
 
+
   alterThemeFunc = () => {
     this.toggleTheme.addEventListener('click', () => {
+
       const body = document.body;
+
       if (body.classList.contains('dark-theme')) {
         body.classList.remove('dark-theme');
         this.themeIcon.className = 'icon-moon';
+        localStorage.setItem('theme', 'day');
       } else {
         body.classList.add('dark-theme');
         this.themeIcon.className = 'icon-sun';
+        localStorage.setItem('theme', 'night');
       }
+
       this.formatJSON();
+
     });
   }
 

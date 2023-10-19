@@ -9,7 +9,7 @@
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Visualizador JSON">
   <meta property="og:description" content="Visualize seu JSON de forma amigável e fácil.">
-  <meta property="og:image" content="https://jsonspectator.com/assets/OIG.jpg">
+  <meta property="og:image" content="https://jsonspectator.com/assets/OIG.png">
   <meta property="og:url" content="https://jsonspectator.com/">
   <meta property="og:type" content="website">
 
@@ -24,6 +24,14 @@
 
   <!-- Custom CSS -->
   <link href="./assets/styles.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- json-view CSS -->
+  <link href="https://cdn.jsdelivr.net/gh/bazh/jquery.json-view/dist/jquery.json-view.css" rel="stylesheet" />
+  <!-- json-view JS -->
+  <script src="https://cdn.jsdelivr.net/gh/bazh/jquery.json-view/dist/jquery.json-view.min.js"></script>
+
 </head>
 
 <body>
@@ -32,7 +40,7 @@
     <div class="row mt-3 input-output-container">
       <div class="col">
         <div class="form-floating h-100">
-          <textarea id="json-input" class="form-control" placeholder="Insira o JSON aqui">{"ID":null,"name":"Doe","first-name":"John","age":25,"hobbies":["reading","cinema",{"sports":["volley-ball","badminton"]}],"address":{}}</textarea>
+          <textarea id="json-input" class="form-control" placeholder="Insira o JSON aqui">{"ID":null,"nome":"Rodrigo","sobrenome":"Silva","idade":22,"hobbies":["Programar","Jogar",{"esportes":[]}],"endereco":{}}</textarea>
           <label for="json-input">JSON Input</label>
         </div>
       </div>
@@ -44,6 +52,15 @@
   <button id="toggle-theme" class="btn btn-dark position-fixed bottom-0 start-0 m-3">
     <i id="toggle-theme-icon" class="icon-moon"></i>
   </button>
+
+
+  <!-- Adicione ao final do seu arquivo, antes do fechamento da tag </body> -->
+
+  <footer class="bg-light mt-3 py-3 text-center">
+    Desenvolvido por <a href="https://github.com/Rodrigomsdevs" target="_blank">RodrigoMS</a>
+  </footer>
+
+
   <!-- Bootstrap 5 JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>

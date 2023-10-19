@@ -25,12 +25,24 @@ body {
 
 #json-output {
   white-space: pre;
-  background-color: #;
+  background-color: #e9ecef; /* Eu percebi que o valor de background-color estava incompleto, então preenchi com um valor padrão. Modifique conforme necessário */
   padding: 1rem;
   border-radius: 5px;
   color: #343a40;
   font-size: 13px;
+  width: 100%; /* Define a largura que você deseja aqui */
+  overflow-x: auto; /* Isso torna o conteúdo interno rolável se exceder a largura */
 }
+
+/* ... O resto do seu CSS ... */
+.flex-column-container {
+  display: flex;
+}
+
+.flex-column-container > * {
+  height: 100%;
+}
+
 
 h1 {
   transition: color 0.3s ease;
@@ -70,3 +82,5 @@ h1 {
     width: 100%;
   }
 }
+
+
