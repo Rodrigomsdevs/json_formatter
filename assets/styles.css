@@ -84,3 +84,24 @@ h1 {
 }
 
 
+/* Estilo para tema claro (default) */
+.custom-footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* fundo claro do Bootstrap */
+  border-top: 1px solid #e0e0e0;
+}
+
+.custom-footer a {
+  color: #007bff; /* cor do link padrão do Bootstrap */
+}
+
+/* Estilo para tema escuro */
+body.dark-theme .custom-footer {
+  background-color: #343a40; /* fundo escuro do Bootstrap */
+  border-top: 1px solid #555;
+}
+
+body.dark-theme .custom-footer a {
+  color: #17a2b8; /* cor do link para o tema escuro */
+}
