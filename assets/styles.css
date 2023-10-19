@@ -32,7 +32,14 @@ body {
   font-size: 13px;
   width: 100%; /* Define a largura que você deseja aqui */
   overflow-x: auto; /* Isso torna o conteúdo interno rolável se exceder a largura */
+  font-weight: normal;  /* Isso irá definir o peso da fonte para normal */
+  font-family: 'Courier New', Courier, monospace;  /* Esta é uma fonte padrão monoespaçada */
+  -webkit-font-smoothing: antialiased;  /* Isso pode ajudar a tornar a fonte mais nítida em navegadores baseados em Webkit como Chrome e Safari */
+  -moz-osx-font-smoothing: grayscale;  /* Isso pode ajudar a tornar a fonte mais nítida em navegadores Firefox */
 }
+
+
+
 
 /* ... O resto do seu CSS ... */
 .flex-column-container {

@@ -1,3 +1,4 @@
+document.getElementById('json-input').innerHTML = '{"ID":null,"nome":"Rodrigo","sobrenome":"Silva","idade":22,"hobbies":["Programar","Jogar",{"esportes":[]}],"endereco":{}}';
 class app_class {
 
   constructor() {
